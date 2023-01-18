@@ -1,0 +1,652 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primaty-color: #0f1b4c;
+}
+
+html {
+    font-size: 80%;
+    /* font-size: 62.5%; */
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ============  Common  =========== */
+a {
+    text-decoration: none;
+}
+
+.content {
+    width: 1400px;
+    max-width: calc(
+        100% - 48px
+    ); /*trong t/h độ rộng trình duyệt nhở hơn 1110px thì sẽ ăn theo 100%*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block; /* thẻ a là thẻ inline*/
+    min-width: 115px;
+    padding: 14.51px 16px;
+    background: var(--primaty-color);
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 21px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.btn:hover {
+    opacity: 80%;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(
+        --line-clamp,
+        2
+    ); /*số dòng đc giới hạn, nếu biến này không ddc khai báo mắc định là 2*/
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ============  Header  =========== */
+.header {
+    position: relative;
+    background: #e6f0ff;
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding-top: 38px;
+    /* margin-top: 50px; Dùng này sẽ bị margin collapse*/
+}
+
+.navbar ul {
+    display: flex;
+    margin-left: 50px;
+}
+
+.navbar .actions {
+    margin-left: auto;
+}
+
+.navbar ul a {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #4f5361;
+    padding: 8px 14px; /* Dùng để tăng diện tích vùng click lên*/
+}
+
+.navbar ul a:hover {
+    background-color: #0093e9;
+    background-image: linear-gradient(270deg, #0093e9 0%, #80d0c7 100%);
+    border-radius: 999px;
+    color: #ffffff;
+    transition: 0.6s;
+}
+
+.navbar .action-link {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: var(--primaty-color);
+}
+
+.navbar .action-btn {
+    padding: 9.51px 16px;
+    margin-left: 1.8rem;
+    border-radius: 8px;
+}
+
+.navbar img {
+    max-width: 150px;
+}
+
+.hero {
+    margin-top: 210px;
+}
+
+.hero .info {
+    width: 55%;
+}
+
+.hero .sub-title {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: #687691;
+}
+
+.hero .title {
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 6.5rem;
+    line-height: 1.19;
+    color: #000336;
+}
+
+.hero .desc {
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.78;
+    color: #5a6473;
+}
+
+.hero-cta {
+    min-width: 170px;
+    margin-top: 40px;
+}
+
+.hero-img {
+    position: absolute;
+    width: 800px;
+    right: calc((100vw - 1400px) / 2 - 100px);
+    bottom: 0;
+}
+
+/* ============  Clients  =========== */
+
+.client {
+    margin-top: 79px;
+    padding: 43px 0 64px;
+}
+
+.client img {
+    max-width: 150px;
+}
+
+.client .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.client .desc {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    color: #7d8589;
+}
+
+.client .row-desc {
+    margin-top: 23px;
+}
+
+.client .images {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 96px;
+}
+
+/* ============  Guides  =========== */
+.guides {
+    margin-top: 40px;
+    padding: 93px 0 79px;
+}
+
+.guides .sub-title {
+    position: relative;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1;
+    text-align: center;
+    color: #000339;
+}
+
+.guides .sub-title::before {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%); /* -50% là chạy một nữa của thanh sang trái*/
+    content: ""; /*tạo thẻ before luôn có content */
+    display: inline-block;
+    width: 41px;
+    height: 4px;
+    background: #000339;
+    border-radius: 12px;
+}
+
+.guides .desc {
+    width: 459px;
+    max-width: 100%;
+    margin: 20px auto 0; /*Trên - trái phải - dưới*/
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.88;
+    text-align: center;
+    color: #5a6473;
+}
+
+.list-guide {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.guide-item {
+    margin: 0 70px;
+    text-align: center;
+}
+
+.guide-item .title {
+    margin-top: 26px;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.1;
+    color: #3b3c45;
+}
+
+.guide-item .link {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #0689ff;
+}
+
+.guide-item .arrow {
+    margin-left: 6px;
+}
+
+.guide-cta {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.guide-cta .btn {
+    min-width: 170px;
+}
+
+/* ============  Featured  =========== */
+.featured {
+    margin-top: 41px;
+    padding: 110px 0; /*Sử dụng padding để có màu nền, còn margin là ko có màu nền*/
+    background: #f5fafe;
+}
+
+.featured .sub-title {
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: #000339;
+}
+
+.featured .row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.featured .desc {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: #5a6473;
+}
+
+.featured .link {
+    display: flex;
+    align-items: center; /*Căn trục dọc của thẻ, justify-content căn trục ngang, còn align-content chỉ căn khi có thuộc tính flex-wrap*/
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #0689ff;
+}
+
+.featured .link .arrow {
+    margin-left: 8px;
+}
+
+.featured .list {
+    display: flex;
+    gap: 30px;
+    margin-top: 70px;
+}
+
+.featured .item {
+    flex: 1; /*flex là thuộc tính viết tắt bao gồm flex-grow: flex-shrink: flex-basis: */
+    background-color: #fff;
+    border-radius: 12px; /*Để không nền trắng khi border ảnh*/
+}
+
+.featured .item .thumb {
+    width: 100%; /*lấp đầy tỷ lệ ngang trong của item trong container*/
+    height: 227px;
+    object-fit: cover; /* lấp đầy khung hình vẫn giữ đúng tỷ lệ */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.featured .item:last-child .thumb {
+    object-position: 0 90%;
+}
+
+.featured .item .body {
+    padding: 17px 20px 24px;
+}
+
+.featured .item .title a {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: #000339;
+}
+
+.featured .item .desc {
+    --line-clamp: 3;
+    margin-top: 11px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #a3a6ab;
+    word-break: break-all; /*Dùng cho t/h người dùng viết liền không cashc sẽ tự động bẽ xuống dòng*/
+}
+
+.featured .item .info {
+    display: flex;
+    align-items: center;
+    margin-top: 21px;
+}
+
+.featured .item .icon {
+    margin-left: 23px;
+}
+
+.featured .item .icon:first-child {
+    margin-left: 0;
+}
+
+.featured .item .label {
+    margin-left: 8px; /*thẻ span là inline chỉ không hoạt động với top -bottom, nhưng vẫn hoạt động left-right*/
+    font-weight: 500;
+    font-size: 1.4rem;
+    letter-spacing: 0.01em;
+    color: #4d4d52;
+}
+
+/* ============  Stats  =========== */
+.stats {
+    margin-top: 75px;
+    padding: 50px 0;
+}
+
+.stats .row {
+    display: flex;
+}
+
+.stats .img-block,
+.stats .info {
+    width: 50%;
+}
+
+.stats .img-block {
+    position: relative;
+}
+
+.stats .info {
+    padding: 79px 0 0 165px;
+}
+
+.stats-trend {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    width: 290px;
+    padding: 45px 22px 40px;
+    border-radius: 0 0 12px 12px;
+    background-color: #fff;
+}
+
+.stats-trend .value {
+    font-weight: 700;
+    font-size: 2.6rem;
+    letter-spacing: 0.01em;
+    color: #000339;
+}
+
+.stats-trend .icon {
+    margin-left: auto; /*Bình thường để sử dụng thuộc tính này phải là thẻ block, tuy nhiên t/h này ko cần vì thẻ cha nó là flex*/
+}
+
+.stats-trend .desc {
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #a7a7a7;
+}
+
+.stats-trend .separate {
+    height: 1.2px;
+    margin-top: 25px;
+    background: #e9e9e9;
+}
+
+.stats .avatar-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 14px;
+    margin-top: 26px;
+}
+
+.stats .avatar-group {
+    display: flex;
+}
+
+.stats .avatar {
+    width: 20px;
+    height: 20px;
+    margin-left: -3px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: var(--bg-color, #fff);
+    font-weight: 450;
+    font-size: 0.7rem;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+}
+
+.stats .avatar:first-child {
+    margin-left: 0;
+}
+
+.stats .img-block .image {
+    display: block;
+    margin-left: auto;
+    width: 420px;
+    height: 520px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.stats .sub-title {
+    position: relative;
+    width: 339px;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1.29;
+    color: #000339;
+}
+
+.stats .sub-title::before {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    content: "";
+    display: block; /* Để set đươc width height*/
+    width: 51px;
+    height: 4px;
+    background: #000339;
+    border-radius: 999px;
+}
+
+.stats .info .desc {
+    width: 400px;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.88;
+    color: #5a6473;
+}
+
+.stats .row-qty {
+    justify-content: space-around;
+    margin-top: 110px;
+}
+
+.stats .qty {
+    font-weight: 600;
+    font-size: 6.4rem;
+    line-height: 1;
+    color: #000000;
+}
+
+.stats .qty-desc {
+    margin-top: 24px;
+    font-weight: 500;
+    font-size: 1.8ren;
+    color: #7b8087;
+}
+
+/* ============  Subscription  =========== */
+.subscription {
+    margin-top: 90px;
+}
+
+.subscription .body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 370px;
+    background: #063183;
+    border-radius: 20px;
+}
+
+.subscription .info {
+    width: 900px;
+    max-width: 100%;
+    padding: 0 80px;
+}
+
+.subscription .sub-title {
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+.subscription .desc {
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.88;
+    color: #ffffff;
+    opacity: 0.75;
+}
+
+.subscription .btn {
+    margin-top: 20px;
+    min-width: 171px;
+    background-color: #fff;
+    color: #002366;
+}
+
+.subscription .image {
+    position: absolute;
+    /* scale: 1.1; */
+    bottom: 0;
+    right: 221px;
+}
+
+/* ============  Footer  =========== */
+.footer {
+    margin-top: 55px;
+    padding: 50px 0 58px;
+}
+
+.footer .row {
+    display: flex;
+}
+
+.footer .row-top {
+    gap: 240px;
+}
+
+.footer .heading {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #1c1c1d;
+}
+
+.footer .list,
+.footer .desc {
+    margin-top: 42px;
+}
+
+.footer .item {
+    margin-top: 18px;
+}
+
+.footer .item a,
+.footer .desc {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 24px;
+    color: #7a7a7e;
+    white-space: nowrap;
+}
+
+.footer .desc {
+    white-space: normal;
+    line-height: 1.75;
+}
+
+.footer .social {
+    display: flex;
+    margin-top: 40px;
+}
+
+.footer .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 300rem 30px;
+    width: 28px;
+    height: 28px;
+    border-radius: 3px;
+}
+
+.footer .social-link:hover {
+    background-color: #ebebeb;
+}
+
+.footer .row-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 81px;
+}
+
+.footer .copyright {
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #c2c2c2;
+}
+
+.footer .row-bottom img {
+    max-width: 150px;
+}
