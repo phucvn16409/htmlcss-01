@@ -16,24 +16,26 @@
         <link rel="stylesheet" href="./assets/css/styles.css" />
     </head>
     <body>
-        <main>
-            <!-- Header -->
-            <header class="header">
+        <main id="home">
+            <header class="fixed-header">
                 <div class="content">
+                    <!-- Narbar Đưa ra ngoài thẻ main để nó neo toàn bộ nào mail, ko là sẽ neo vào thẻ cha, cuốn tranh bị cuộn navbar luôn --> 
                     <nav class="navbar">
                         <!-- Logo -->
-                        <img
-                            src="./assets/img/theupthings.png"
-                            alt="theupthings."
-                        />
+                        <a href="#home">
+                            <img
+                                src="./assets/img/theupthings.png"
+                                alt="theupthings."
+                            />
+                        </a>
 
                         <!-- Navigation -->
                         <ul>
-                            <li><a href="#!">Home</a></li>
-                            <li><a href="#!">Features</a></li>
-                            <li><a href="#!">Services</a></li>
-                            <li><a href="#!">Resources</a></li>
-                            <li><a href="#!">Contact</a></li>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#resources">Resources</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
 
                         <!-- Action -->
@@ -42,9 +44,12 @@
                             <a href="#!" class="btn action-btn">Sign up</a>
                         </div>
                     </nav>
+                </div>
+            </header>
 
-                    <!-- Hero -->
-                    <div class="hero">
+            <!-- Hero -->
+            <div class="hero-wrap">
+                <div class="content">
                         <div class="info">
                             <p class="sub-title">Welcome to My Portfolio</p>
                             <h1 class="title">
@@ -66,7 +71,7 @@
                         class="hero-img"
                     />
                 </div>
-            </header>
+            </div>
 
             <!-- Clients -->
             <div class="client">
@@ -130,7 +135,7 @@
             </div>
 
             <!-- Guides -->
-            <div class="guides">
+            <div id="services" class="guides">
                 <div class="content">
                     <h2 class="sub-title">How its works?</h2>
                     <p class="desc">
@@ -199,7 +204,7 @@
             </div>
 
             <!-- Featured -->
-            <div class="featured">
+            <div id="features" class="featured">
                 <div class="content">
                     <header>
                         <h2 class="sub-title">Featured Properties</h2>
@@ -348,7 +353,7 @@
             </div>
 
             <!-- Stats -->
-            <div class="stats">
+            <div id="resources" class="stats">
                 <div class="content">
                     <div class="row">
                         <div class="img-block">
@@ -547,7 +552,7 @@
             </div>
 
             <!-- Footer -->
-            <footer class="footer">
+            <footer id="contact" class="footer">
                 <div class="content">
                     <div class="row row-top">
                         <!-- PRODUCTS -->
