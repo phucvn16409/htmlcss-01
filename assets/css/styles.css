@@ -635,14 +635,19 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 300rem 30px;
     width: 28px;
     height: 28px;
     border-radius: 3px;
+    background: #f9f9f9;
+    scale: 1.5;
 }
 
 .footer .social-link:hover {
     background-color: #ebebeb;
+}
+
+.footer .social-link + .social-link {
+    margin-left: 40px;
 }
 
 .footer .row-bottom {
